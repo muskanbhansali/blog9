@@ -21,6 +21,8 @@ Route::get('/', function () {
     return view("about");
 });*/
 
-Route::view("users","users");
+/* Route::get('/users/{name}', function($name){
+    return view ('users',["name"=>$name]);
+}); */
 
-Route::view("about","about");
+Route::get('users',[UserController::class,'loadview']);
